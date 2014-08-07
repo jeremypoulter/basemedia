@@ -14,5 +14,20 @@ namespace BmffViewer
         {
             BmffViewer.Properties.Settings.Default.Save();
         }
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            MainWindow main = new MainWindow();
+            foreach (string arg in e.Args)
+            {
+                main.Files.Add(new BaseMediaFile(arg));
+            }
+            main.ShowDialog();
+
+            this.Shutdown();
+        }
+
     }
 }
