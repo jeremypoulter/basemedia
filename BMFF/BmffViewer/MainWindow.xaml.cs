@@ -52,7 +52,9 @@ namespace BmffViewer
             "Mobile Files|*.3gp;*.3gpp;*.3g2;*.3gpp2;*.dcf",
             "Image Files|*.jp2;*.jpx;*.qif;*.qtif",
             "Video files|*.mp4;*.m4a;*.m4v;*.mov;*.moov;*.ismv;*.isma;*.ismt;*.3gp;*.3gpp;*.3g2;*.3gpp2;*.m21;*.mp21;*.dvb;*.f4v;*.f4p",
-            
+
+            "DASH|*.mp4;*.m4s;*.six;*.uvv;*.uva",
+
             "3GPP|*.3gp;*.3gpp;*.3g2;*.3gpp2",
             "DCF|*.dcf",
             "DVB|*.dvb",
