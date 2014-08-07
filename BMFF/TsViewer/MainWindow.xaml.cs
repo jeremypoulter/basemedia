@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 using MatrixIO.IO.MpegTs;
 
 namespace TsViewer
@@ -27,6 +28,13 @@ namespace TsViewer
         public DispatchingObservableCollection<TsSource> Sources { get; set; }
         private readonly Timer _updateTimer = new Timer(1000);
         private readonly TextWriterTraceListener _logWriter = new TextWriterTraceListener(@"C:\Temp\TsViewer.txt");
+
+        private static readonly string FileFormats = String.Join("|", new string[]
+        {
+            "MPEG TS|*.ts",
+
+            "All Files|*.*",
+        });
 
         public MainWindow()
         {
@@ -124,7 +132,7 @@ namespace TsViewer
             _updateTimer.Start();
             try
             {
-                Sources.Add(TsSource.Create(@"C:\temp\00011.m2ts"));
+                //Sources.Add(TsSource.Create(@"C:\temp\00011.m2ts"));
                 //Sources.Add(TsSource.Create("udp://@224.0.0.42:4242"));
             }
             catch (Exception err)
@@ -151,6 +159,18 @@ namespace TsViewer
             {
                 _logWindow.Activate();
             }
+        }
+
+        private void MenuItem_OpenFile_Click(object sender, RoutedEventArgs e)
+        {
+            var openFileDialog = new OpenFileDialog { Filter = FileFormats, CheckFileExists = true };
+            openFileDialog.FileOk += (source, cancelEventArgs) =>
+            {
+                Sources.Add(TsSource.Create(openFileDialog.FileName));
+            };
+            openFileDialog.ShowDialog(this);
+            e.Handled = true;
+            
         }
     }
 }

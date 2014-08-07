@@ -59,7 +59,7 @@
         </Grid.ColumnDefinitions>
         <Menu Grid.Row="0" Grid.ColumnSpan="2">
             <MenuItem Header="_File">
-                <MenuItem Header="_Open File"/>
+                <MenuItem Header="_Open File" Click="MenuItem_OpenFile_Click"/>
                 <MenuItem Header="Open _Stream"/>
             </MenuItem>
             <MenuItem Header="_View">
