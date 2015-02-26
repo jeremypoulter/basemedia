@@ -13,6 +13,7 @@ using MatrixIO.IO.Bmff;
 using System.Windows.Interop;
 using System.Drawing;
 using System.Windows;
+using System.IO;
 
 namespace BmffViewer
 {
@@ -30,13 +31,19 @@ namespace BmffViewer
 
         private ImageSource GetFileIcon(string filename)
         {
-
-            using (Icon i = Icon.ExtractAssociatedIcon(filename))
+            try
             {
-                return Imaging.CreateBitmapSourceFromHIcon(
-                                        i.Handle,
-                                        new Int32Rect(0, 0, i.Width, i.Height),
-                                        BitmapSizeOptions.FromEmptyOptions());
+                using (Icon i = Icon.ExtractAssociatedIcon(filename))
+                {
+                    return Imaging.CreateBitmapSourceFromHIcon(
+                                            i.Handle,
+                                            new Int32Rect(0, 0, i.Width, i.Height),
+                                            BitmapSizeOptions.FromEmptyOptions());
+                }
+            }
+            catch (Exception e)
+            {
+              return new BitmapImage(new Uri("pack://application:,,,/BmffViewer;component/Images/Folder_16x16.png"));
             }
         }
 
