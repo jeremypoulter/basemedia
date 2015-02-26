@@ -9,13 +9,19 @@
     <RootNamespace>MatrixIO</RootNamespace>
     <AssemblyName>MatrixIO.IO.Bmff</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile1</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile136</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -66,8 +72,26 @@
     <Compile Include="IO\Bmff\Boxes\MediaHeaderBox.cs" />
     <Compile Include="IO\Bmff\Boxes\MovieExtendsHeaderBox.cs" />
     <Compile Include="IO\Bmff\Boxes\NullMediaHeaderBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\AlbumArtistBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\AlbumBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\ArtistBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\CommentBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\CompilationBox.cs" />
     <Compile Include="IO\Bmff\Boxes\QuickTime\CompressedMovieBox.cs" />
     <Compile Include="IO\Bmff\Boxes\QuickTime\CompressedMovieDataBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\CopyrightBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\CoverBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\CustomGenreBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\DataBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\DescriptionBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\EncoderBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\GaplessPlaybackBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\GenericBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\GroupingBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\IdBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\MeanBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\MediaTypeBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\MetadataItemListBox.cs" />
     <Compile Include="IO\Bmff\Boxes\QuickTime\DataCompressionBox.cs" />
     <Compile Include="IO\Bmff\Boxes\DataInformationBox.cs" />
     <Compile Include="IO\Bmff\Boxes\EditBox.cs" />
@@ -93,16 +117,35 @@
     <Compile Include="IO\Bmff\Boxes\QuickTime\DataEntryResourceBox.cs" />
     <Compile Include="IO\Bmff\Boxes\QuickTime\ElementaryStreamDescriptorBox.cs" />
     <Compile Include="IO\Bmff\Boxes\QuickTime\MovieHintInfoBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\NameBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\NetworkBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\PurchaseDateBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\RatingBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\RecordingYearBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\ShowBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\SortAlbumBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\SortTitleBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\StandardGenreBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\StoreAccountTypeBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\StoreCountryCodeBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\SynopsisBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\TempBox.cs" />
     <Compile Include="IO\Bmff\Boxes\QuickTime\TrackApertureModeDimensionsBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\TrackAuthorBox.cs" />
     <Compile Include="IO\Bmff\Boxes\QuickTime\TrackCleanApertureDimensionsBox.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="IO\Bmff\Boxes\QuickTime\TrackEncodedPixelsDimensionsBox.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="IO\Bmff\Boxes\QuickTime\TrackNumberBox.cs" />
     <Compile Include="IO\Bmff\Boxes\QuickTime\TrackProductionApertureDimensionsBox.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="IO\Bmff\Boxes\QuickTime\TrackTitleBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\TvEpisodeBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\TvEpisodeNumberBox.cs" />
+    <Compile Include="IO\Bmff\Boxes\QuickTime\TvSeasonBox.cs" />
     <Compile Include="IO\Bmff\Boxes\QuickTime\WideBox.cs" />
     <Compile Include="IO\Bmff\Boxes\SampleDependencyTypeBox.cs" />
     <Compile Include="IO\Bmff\Boxes\SampleDescriptionBox.cs" />
