@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 
 namespace MatrixIO.IO.Bmff
 {
@@ -10,8 +11,10 @@ namespace MatrixIO.IO.Bmff
         private uint _FourCC;
 
         public FourCC(string fourcc) : this(Encoding.UTF8.GetBytes(fourcc)) { }
+        public FourCC(char[] fourcc) : this(Encoding.GetEncoding("iso-8859-1").GetBytes(fourcc)) { }
         public FourCC(byte[] fourcc)
         {
+            Debug.Assert(4 == fourcc.Count());
             _FourCC = BitConverter.ToUInt32(fourcc, 0).NetworkToHostOrder();
         }
         public FourCC(int fourcc) : this((uint)fourcc) { }
@@ -87,7 +90,7 @@ namespace MatrixIO.IO.Bmff
         {
             try
             {
-                string fourcc = Encoding.UTF8.GetString(GetBytes(), 0, 4);
+                string fourcc = Encoding.GetEncoding("iso-8859-1").GetString(GetBytes(), 0, 4);
                 bool hasControlChars = false;
                 foreach (char c in fourcc) if (char.IsControl(c)) hasControlChars = true;
                 if (!hasControlChars) return fourcc;

@@ -9,7 +9,7 @@ namespace MatrixIO.IO.Bmff.Boxes
     /// <summary>
     /// Recording Year Atom ("\xA9day")
     /// </summary>
-    [Box("\xA9day", "Recording Year Atom")]
+    [Box(new char[] { '\xA9', 'd', 'a', 'y' }, "Recording Year Atom")]
     public class RecordingYearBox : Box, ISuperBox
     {
         public RecordingYearBox() : base() { }

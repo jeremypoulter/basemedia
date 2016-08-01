@@ -16,6 +16,16 @@ namespace MatrixIO.IO.Bmff
             Type = new BoxType(type);
             Description = description;
         }
+        public BoxAttribute(byte[] type, string description = null)
+        {
+            Type = new BoxType(type);
+            Description = description;
+        }
+        public BoxAttribute(char[] type, string description = null)
+        {
+            Type = new BoxType(type);
+            Description = description;
+        }
         public BoxAttribute(int type, string description = null)
         {
             Type = new BoxType((uint)type);

@@ -9,7 +9,7 @@ namespace MatrixIO.IO.Bmff.Boxes
     /// <summary>
     /// Custom Genre Atom ("\xA9gen")
     /// </summary>
-    [Box("\xA9gen", "Custom Genre Atom")]
+    [Box(new char[] { '\xA9', 'g', 'e', 'n' }, "Custom Genre Atom")]
     public class CustomGenreBox : Box, ISuperBox
     {
         public CustomGenreBox() : base() { }

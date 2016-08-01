@@ -9,7 +9,7 @@ namespace MatrixIO.IO.Bmff.Boxes
     /// <summary>
     /// Comment Atom ("\xA9cmt")
     /// </summary>
-    [Box("\xA9cmt", "Comment Atom")]
+    [Box(new char[] { '\xA9', 'c', 'm', 't' }, "Comment Atom")]
     public class CommentBox : Box, ISuperBox
     {
         public CommentBox() : base() { }

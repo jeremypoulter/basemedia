@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{1A0873BE-2FFC-4F9A-AF37-27A3067733E9}"
 EndProject
@@ -16,8 +16,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixIO.IO.Ebml", "MatrixIO.IO.Ebml\MatrixIO.IO.Ebml.csproj", "{74FCBCE0-CF0D-49A4-9EB7-A172D4865E94}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixIO.IO", "MatrixIO.IO\MatrixIO.IO.csproj", "{EDC16014-ECA3-4B93-A849-B81EAC369DD2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SLTest", "SLTest\SLTest.csproj", "{AF5DCA17-D277-4B87-BFD2-5CB49DD5D4C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,16 +87,6 @@ Global
 		{EDC16014-ECA3-4B93-A849-B81EAC369DD2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{EDC16014-ECA3-4B93-A849-B81EAC369DD2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{EDC16014-ECA3-4B93-A849-B81EAC369DD2}.Release|x86.ActiveCfg = Release|Any CPU
-		{AF5DCA17-D277-4B87-BFD2-5CB49DD5D4C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF5DCA17-D277-4B87-BFD2-5CB49DD5D4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF5DCA17-D277-4B87-BFD2-5CB49DD5D4C8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{AF5DCA17-D277-4B87-BFD2-5CB49DD5D4C8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{AF5DCA17-D277-4B87-BFD2-5CB49DD5D4C8}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{AF5DCA17-D277-4B87-BFD2-5CB49DD5D4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF5DCA17-D277-4B87-BFD2-5CB49DD5D4C8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF5DCA17-D277-4B87-BFD2-5CB49DD5D4C8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{AF5DCA17-D277-4B87-BFD2-5CB49DD5D4C8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{AF5DCA17-D277-4B87-BFD2-5CB49DD5D4C8}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,6 +94,5 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{43B995AA-71B1-411A-85A7-CCA804759127} = {1A0873BE-2FFC-4F9A-AF37-27A3067733E9}
 		{3FED6CAB-5E57-40AB-A44A-7B0B25664C2D} = {1A0873BE-2FFC-4F9A-AF37-27A3067733E9}
-		{AF5DCA17-D277-4B87-BFD2-5CB49DD5D4C8} = {1A0873BE-2FFC-4F9A-AF37-27A3067733E9}
 	EndGlobalSection
 EndGlobal

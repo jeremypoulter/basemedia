@@ -9,7 +9,7 @@ namespace MatrixIO.IO.Bmff
     {
         private static readonly byte[] BASE_UUID = {
             0x00, 0x00, 0x00, 0x00, // this portion is replaced by the type
-            0x00, 0x11, 0x00, 0x10, 0x80, 0x00, 0x00, 0xAA, 0x00, 0x38, 0x9B, 0x71 
+            0x00, 0x11, 0x00, 0x10, 0x80, 0x00, 0x00, 0xAA, 0x00, 0x38, 0x9B, 0x71
         };
 
         private static readonly FourCC UUID_FOURCC = new FourCC(0x75756964);
@@ -22,6 +22,8 @@ namespace MatrixIO.IO.Bmff
 
         //public BoxType(BoxTypes type) : this((uint)type) { }
         public BoxType(string fourcc) : this(new FourCC(fourcc)) { }
+        public BoxType(byte[] fourcc) : this(new FourCC(fourcc)) { }
+        public BoxType(char[] fourcc) : this(new FourCC(fourcc)) { }
         public BoxType(uint fourcc) : this(new FourCC(fourcc)) {}
         public BoxType(FourCC fourcc)
         {
@@ -30,7 +32,7 @@ namespace MatrixIO.IO.Bmff
             byte[] uuidBytes = new byte[16];
             Buffer.BlockCopy(_FourCC.GetBytes(), 0, uuidBytes, 0, 4);
             Buffer.BlockCopy(BASE_UUID, 4, uuidBytes, 4, 12);
-            
+
             _UserType = new Guid(uuidBytes);
         }
         public BoxType(Guid uuid)

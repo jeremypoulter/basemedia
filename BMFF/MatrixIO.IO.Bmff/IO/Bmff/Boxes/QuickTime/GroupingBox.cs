@@ -9,7 +9,7 @@ namespace MatrixIO.IO.Bmff.Boxes
     /// <summary>
     /// Grouping Atom ("\xA9grp")
     /// </summary>
-    [Box("\xA9grp", "Grouping Atom")]
+    [Box(new char[] { '\xA9', 'g', 'r', 'p' }, "Grouping Atom")]
     public class GroupingBox : Box, ISuperBox
     {
         public GroupingBox() : base() { }

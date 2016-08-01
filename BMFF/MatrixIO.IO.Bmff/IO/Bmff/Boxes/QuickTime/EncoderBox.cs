@@ -9,7 +9,7 @@ namespace MatrixIO.IO.Bmff.Boxes
     /// <summary>
     /// Encoder Atom ("\xA9too")
     /// </summary>
-    [Box("\xA9too", "Encoder Atom")]
+    [Box(new char[] { '\xA9', 't', 'o', 'o' }, "Encoder Atom")]
     public class EncoderBox : Box, ISuperBox
     {
         public EncoderBox() : base() { }

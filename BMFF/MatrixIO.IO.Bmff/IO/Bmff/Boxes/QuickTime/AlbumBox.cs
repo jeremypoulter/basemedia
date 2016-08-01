@@ -9,7 +9,7 @@ namespace MatrixIO.IO.Bmff.Boxes
     /// <summary>
     /// Album Atom ("\xA9alb")
     /// </summary>
-    [Box("\xA9alb", "Album Atom")]
+    [Box(new char[] { '\xA9', 'a', 'l', 'b' }, "Album Atom")]
     public class AlbumBox : Box, ISuperBox
     {
         public AlbumBox() : base() { }

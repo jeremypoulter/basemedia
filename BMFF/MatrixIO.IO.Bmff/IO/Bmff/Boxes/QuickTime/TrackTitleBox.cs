@@ -9,7 +9,7 @@ namespace MatrixIO.IO.Bmff.Boxes
     /// <summary>
     /// Track Title Atom ("\xA9nam")
     /// </summary>
-    [Box("\xA9nam", "Track Title Atom")]
+    [Box(new char[] { '\xA9', 'n', 'a', 'm' }, "Track Title Atom")]
     public class TrackTitleBox : Box, ISuperBox
     {
         public TrackTitleBox() : base() { }

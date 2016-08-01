@@ -9,7 +9,7 @@ namespace MatrixIO.IO.Bmff.Boxes
     /// <summary>
     /// Track Author Atom ("\xA9wrt")
     /// </summary>
-    [Box("\xA9wrt", "Track Author Atom")]
+    [Box(new char[] { '\xA9', 'w', 'r', 't' }, "Track Author Atom")]
     public class TrackAuthorBox : Box, ISuperBox
     {
         public TrackAuthorBox() : base() { }
